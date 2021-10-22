@@ -16,7 +16,7 @@ x = pd.get_dummies(x, drop_first = True)
 # Get predicted model parameters
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 42)
 model = LinearRegression().fit(x_train, y_train)
-y_pred =  model.predict(x_test)
+y_pred = model.predict(x_test)
 
 # Check model accuracy
 r2 = model.score(x_test, y_test)
