@@ -13,8 +13,8 @@ def search(x, points):
     # Handle case where x is out of bounds by stepping left or right
     return lo + (lo == 0) - (lo == n)
 
-# Uses the line of best fit to estimate y from x_input. Returns 0 if it can't.
-# Extrapolates y if x_input is out of range. 
+# Uses the line of best fit to estimate y from x_input without imports. 
+# Returns 0 if it can't. Extrapolates y if x_input is out of range. 
 def linear_interpolation_from_scratch(n, x_points, y_points, x_input):
     points = sorted(zip(x_points, y_points))
     i = search(x_input, points)
@@ -35,5 +35,5 @@ y_points = [10.0, 0.0, 15.0, 5.0, 0.0]
 n = len(x_points)
 x_input = -0.3
 
-linear_interpolation(n, x_points, y_points, x_input)
+linear_interpolation_from_scratch(n, x_points, y_points, x_input)
 linear_interpolation(x_points, y_points, x_input)
