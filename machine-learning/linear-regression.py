@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -21,5 +20,5 @@ y_pred = model.predict(x_test)
 # Check model accuracy
 r2 = model.score(x_test, y_test)
 mse = mean_squared_error(y_test, y_pred)
-print('R-Squared Error = ', r2)
-print('Mean Squared Error = ', mse)
+print('R-Squared Error =', r2)
+print('Mean Squared Error =', mse)
